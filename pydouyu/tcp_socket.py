@@ -33,6 +33,7 @@ class TCPSocket(object):
                 except Exception as e:
                     logging.warning("Socket connect failed with %s:%d. Exception: %s"
                           % (self.host, self.port, e))
+                    self.socket.close()
                     self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     logging.warning("Try reconnect in 5 seconds")
 
