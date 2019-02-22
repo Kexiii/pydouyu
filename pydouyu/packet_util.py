@@ -35,7 +35,7 @@ def extract_str_from_data(data):
     packet_size = int.from_bytes(data[0:4], byteorder='little')
     if packet_size != len(data):
         return ""
-    return data[8:].decode("utf8","ignore")
+    return data[8:].decode("utf8", "ignore")
 
 
 def parse_str_to_dict(ori_str):

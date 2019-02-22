@@ -13,7 +13,12 @@ class TCPSocket(object):
     def send(self, data):
         if self.closed:
             return
-        return self.socket.sendall(data)
+        try:
+            self.socket.sendall(data)
+        except Exception as e:
+            self.close()
+            logging.warning("Socket sendall failed. Exception: %s" % e)
+        return
 
     def close(self):
         if not self.closed:
@@ -28,7 +33,9 @@ class TCPSocket(object):
                 except Exception as e:
                     logging.warning("Socket connect failed with %s:%d. Exception: %s"
                           % (self.host, self.port, e))
+                    self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     logging.warning("Try reconnect in 5 seconds")
+
                     time.sleep(5)
                     continue
                 break
@@ -37,9 +44,14 @@ class TCPSocket(object):
     def receive(self, target_size):
         data = b''
         while target_size:
-            tmp = self.socket.recv(target_size)
+            try:
+                tmp = self.socket.recv(target_size)
+            except Exception as e:
+                self.close()
+                logging.warning("Socket recv failed. Exception: %s" % e)
+                return None
             if not tmp:
-                self.closed = True
+                self.close()
                 return None
             target_size -= len(tmp)
             data += tmp
