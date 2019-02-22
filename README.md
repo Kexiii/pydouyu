@@ -1,5 +1,5 @@
 # pydouyu
-![PyPI](https://img.shields.io/pypi/v/pydouyu.svg)  ![py3][py3]
+![PyPI](https://img.shields.io/pypi/v/pydouyu.svg)  ![PyPI - Downloads](https://img.shields.io/pypi/dm/pydouyu.svg) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pydouyu.svg)
 
 斗鱼TV三方API、弹幕接口实现
 
