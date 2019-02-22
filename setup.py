@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pydouyu",
-    version="0.0.2",
+    version="0.0.3",
     author="kexiii",
     author_email="kexiii@163.com",
     description="Python implementation of douyu TV API",
