@@ -9,7 +9,6 @@
 - 稳定、无（少）数据遗漏
 
 # Install
-- Python3
 - ```pip3 install pydouyu```
 
 # Example
