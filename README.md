@@ -1,10 +1,16 @@
 # pydouyu
+![PyPI](https://img.shields.io/pypi/v/pydouyu.svg)  ![py3][py3]
+
 斗鱼TV三方API、弹幕接口实现
 
+# Feature
+- 官方已公布的斗鱼三方API完整实现
+- 自动重连
+- 稳定、无（少）数据遗漏
+
 # Install
-- Install python3 & pip3
-- Install pydouyu
-    - pip3 install pydouyu
+- Python3
+- ```pip3 install pydouyu```
 
 # Example
 ````python
