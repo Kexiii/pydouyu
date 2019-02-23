@@ -39,7 +39,7 @@ def newblackres_handler(msg):
         print("newblackres_handler failed. Exception: %s" % e)
 
 
-c = Client(room_id=562225)
+c = Client(room_id=562590)
 c.add_handler('chatmsg', chatmsg_handler)
 c.add_handler('uenter', uenter_handler)
 c.add_handler('newblackres', newblackres_handler)
