@@ -38,4 +38,14 @@ c.start()
 ````
 
 # Usage
-- TODO
+
+- 运行 Demo
+    - ```git clone https://github.com/Kexiii/pydouyu.git```
+    - ```cd pydouyu```
+    - ```python3 example.py```
+- 二次开发
+    - 示例代码见 [example.py](https://github.com/Kexiii/pydouyu/blob/master/example.py)
+    - 用户可以自定义handler函数，并且调用*Client.add_handler*注册
+    - *Client.add_handler*传入的第一个参数为消息类型，有哪些消息类型见下文弹幕协议
+    - msg是一个dict，其的各字段见下文中的弹幕协议
+- [弹幕协议](https://github.com/Kexiii/pydouyu/releases)
