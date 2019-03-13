@@ -30,9 +30,12 @@ def uenter_handler(msg):
 
 def newblackres_handler(msg):
     try:
+        time_stamp = msg['endtime']
+        time_local = time.localtime(time_stamp)
+        time_str = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
         output = time.strftime("[%Y-%m-%d %H:%M:%S] ", time.localtime()) + \
                  "[" + otype_to_str[msg['otype']] + "] " + \
-                 msg['snic'] + " 封禁了 " + msg['dnic'] + " 到 " + msg['endtime']
+                 msg['snic'] + " 封禁了 " + msg['dnic'] + " 到 " + time_str
         print(output)
         sys.stdout.flush()
     except Exception as e:
