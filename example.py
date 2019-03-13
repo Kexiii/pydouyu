@@ -31,7 +31,7 @@ def uenter_handler(msg):
 def newblackres_handler(msg):
     try:
         time_stamp = msg['endtime']
-        time_local = time.localtime(time_stamp)
+        time_local = time.localtime(int(time_stamp))
         time_str = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
         output = time.strftime("[%Y-%m-%d %H:%M:%S] ", time.localtime()) + \
                  "[" + otype_to_str[msg['otype']] + "] " + \
