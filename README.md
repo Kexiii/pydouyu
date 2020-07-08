@@ -4,7 +4,7 @@
 斗鱼TV三方API、弹幕接口实现
 
 # Note
-- 斗鱼官方提供的“openbarrage.douyutv.com”已经不维护，见[issue#1](https://github.com/Kexiii/pydouyu/issues/1)，现在需要手动指定弹幕服务器ip来保持正常运行
+- 斗鱼官方提供的“openbarrage.douyutv.com”已经不维护，见[issue#1](https://github.com/Kexiii/pydouyu/issues/1)，现在需要手动指定弹幕服务器ip来保持正常运行 --2020.07.08
 
 # Feature
 - 官方已公布的斗鱼三方API完整实现
