@@ -5,7 +5,7 @@ from .tcp_socket import TCPSocket
 
 class Client(object):
     def __init__(self, room_id=562590, heartbeat_interval=45,
-                 barrage_host="openbarrage.douyutv.com",
+                 barrage_host="119.96.201.28",
                  barrage_port=8601):
         self.room_id = room_id
         self.heartbeat_interval = heartbeat_interval
