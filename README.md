@@ -4,7 +4,7 @@
 斗鱼TV三方API、弹幕接口实现
 
 # Note
-- 目前看通过ip直连的弹幕服务器也挂掉了，已经是不可用状态 --2022.12.08
+- 目前新的弹幕服务器域名切换到了`danmuproxy.douyu.com` --2022.12.08
 - 斗鱼官方提供的“openbarrage.douyutv.com”已经不维护，见[issue#1](https://github.com/Kexiii/pydouyu/issues/1)，现在需要手动指定弹幕服务器ip来保持正常运行 --2020.07.08
 
 # Feature
